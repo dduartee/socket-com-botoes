@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=IE11">
+    <title>Teste de Socket 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    #teste {
+        background-color: rgb(204, 162, 243);
+        width: 10px;
+    }
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+        
+        function btn1() {
+            socket.emit('valor', 1);
+            socket.on('valor', function(msg){ // pega a mensagem postada pelo socket
+            //alert(msg);
+            document.getElementById('saida').innerHTML = msg;//troca o valor do id saida pelo msg recebido do socket
+            
+        });
+        }
+        function btn2() {
+            socket.emit('valor', 2);
+            socket.on('valor', function(msg){ // pega a mensagem postada pelo socket
+            //alert(msg);
+            document.getElementById('saida').innerHTML = msg;//troca o valor do id saida pelo msg recebido do socket
+            
+        });
+        }
+        function btn3() {
+            socket.emit('valor', 3);
+            socket.on('valor', function(msg){ // pega a mensagem postada pelo socket
+            //alert(msg);
+            document.getElementById('saida').innerHTML = msg;//troca o valor do id saida pelo msg recebido do socket
+            
+        });
+        }
+        function btn4() {
+            socket.emit('valor', 4);
+            socket.on('valor', function(msg){ // pega a mensagem postada pelo socket
+            //alert(msg);
+            document.getElementById('saida').innerHTML = msg;//troca o valor do id saida pelo msg recebido do socket
+            
+        });
+        }
+        function btn5() {
+            socket.emit('valor', 5);
+            socket.on('valor', function(msg){ // pega a mensagem postada pelo socket
+            //alert(msg);
+            document.getElementById('saida').innerHTML = msg;//troca o valor do id saida pelo msg recebido do socket
+            
+        });
+        }
+    </script>
+</head>
+<body>
+    <h1> Botoes </h1>
+        <input type="button" name="btn1" id="btn1" value="1" onclick= btn1()"/>
+        <input type="button" name="btn2" id="btn2" value="2" onclick= btn2()"/>
+        <input type="button" name="btn3" id="btn3" value="3" onclick= btn3()"/>
+        <input type="button" name="btn4" id="btn4" value="4" onclick= btn4()"/>
+        <p>botão</p><div id="saida"></div><p>ligado</p>
+</body>
+</html>
