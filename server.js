@@ -11,11 +11,11 @@ io.on('connection', function(socket){
     socket.on('valor', function(msg){
         io.emit('valor', msg);
         socket.broadcast.emit('valor', msg); 
-        console.log('message: ' + msg);
+        console.log('valor: ' + msg);
     });
 
 });
 
-http.listen(7777, function(){
-  console.log('Rodando na porta 7777');
+http.listen(3000, function(){
+  console.log('Rodando na porta *:3000');
 });
